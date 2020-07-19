@@ -1,0 +1,4 @@
+@import './src/mixins/mixins.scss';
+@include b(button){
+    display: inline-block;
+}

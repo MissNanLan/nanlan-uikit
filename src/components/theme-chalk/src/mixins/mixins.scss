@@ -1,0 +1,8 @@
+@import "function";
+@mixin b($block){
+    $B: $namespace + "-" + $block !global;
+
+    .#{$B} {
+        @content
+    }
+}
