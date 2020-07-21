@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "typings": "types/index.d.ts",
+  "files": [
+    "src",
+    "types"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

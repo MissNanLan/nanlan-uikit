@@ -1,5 +1,5 @@
 const { description } = require('../../package')
-
+const path = require('path')
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -59,7 +59,6 @@ module.exports = {
       ],
     }
   },
-
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
@@ -68,19 +67,11 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
   ],
 
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.s[ac]ss$/i,
-  //       use: [
-  //         // Creates `style` nodes from JS strings
-  //         'style-loader',
-  //         // Translates CSS into CommonJS
-  //         'css-loader',
-  //         // Compiles Sass to CSS
-  //         'sass-loader',
-  //       ],
-  //     },
-  //   ],
-  // },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src')
+      }
+    }
+  }
 }

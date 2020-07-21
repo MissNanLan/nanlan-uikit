@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import btn from "../../../src/components/button/src/button";
+import btn from "/Users/nanlan/Documents/my-project/vue-project/nanlan-ui/src/components/button/src/button";
 export default {
   data() {
     return {
